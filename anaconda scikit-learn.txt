@@ -1,0 +1,3 @@
+#anaconda install scikit-learn
+
+conda update scikit-learn

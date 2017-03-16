@@ -1,0 +1,11 @@
+conda update conda
+
+
+conda install numpy
+conda install pandas
+conda install matplotlib
+conda install seaborn
+
+
+#Jupyter notebook can run R codes also
+conda install -c r r-essentials

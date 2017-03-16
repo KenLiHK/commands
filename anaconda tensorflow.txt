@@ -1,0 +1,28 @@
+# check environment
+$ conda info --envs
+
+# create python 3.5 environment
+$ conda create -n py35 python=3.5 anaconda
+
+#To activate this py35 environment, use,
+$ activate py35
+
+#Install tensorflow with python version, otherwise it will shows error message "Error: too few arguments, must supply command line package specs or --file"
+$ conda create -n tensorflow python=3.5 anaconda
+
+#To activate tensorflow environment, use,
+$ activate tensorflow
+
+#To deactivate tensorflow environment, use,
+$ deactivate tensorflow
+
+
+#install tensorflow in CPU only
+$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
+
+#install tensorflow in GPU 
+$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.0.0-cp35-cp35m-win_x86_64.whl
+
+
+# tensorflow board command
+tensorboard --logdir='logs/'

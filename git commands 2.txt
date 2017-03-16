@@ -1,0 +1,10 @@
+#start to git
+#connect to GitHub
+git config --global user.name "lichiyeung"
+
+git config --global user.email "lichiyeung@gmail.com"
+
+
+#download sources from GitHub
+git clone https://github.com/KenLiHK/Python36_tut.git
+

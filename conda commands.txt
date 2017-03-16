@@ -1,0 +1,22 @@
+基本命令
+＃查看版本
+conda info —envs
+或
+conda env list
+
+＃ 安装完整版python2版本的conda
+conda create -n py2 python=2 anaconda
+
+＃ 移除虚拟环境
+conda remove --all -n 3todo
+
+# 创建只有django的python2环境，名字py2-dj，注意，python=2 django是连续参数
+conda create python=2 django -n py2-dj
+
+＃ 如果不指定python版本,那是不能够滴，会报错
+conda create -n env-test
+Error: too few arguments, must supply command line package specs or --file
+
+# 所以要至少指定个pytohn版本，可以不带任何库
+conda create -n env-test python=3
+Fetching package metadata .......

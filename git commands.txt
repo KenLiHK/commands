@@ -1,0 +1,107 @@
+#GitHub command
+
+git init
+git status
+
+#keep track change to the file and put to staging area
+git add octocat.txt
+
+#commit source with comment to repository
+git commit -m 'Add cute octocat story'
+
+
+
+git add '*.txt'
+
+git commit -m 'Add all octocat family'
+
+#show commit history
+git log
+
+#add to remote repositories
+git remote add origin http://github.com/try-git/try_git.git
+
+#push to commit local source to GibHub server, -u origin means the GibHub URL
+git push -u origin master
+
+
+#pull sources from GibHub server
+git pull origin master
+
+#hide some change not yet want to commit
+git stash
+
+#diff last commit with head
+git diff HEAD
+
+
+#diff file with file in stage
+git add octofamily/octodog.txt
+git diff --staged
+
+
+#unstaging octofamily/octodog.txt file (file is still here)
+git reset octofamily/octodog.txt
+
+#undo all change from last commit for octocat.txt(include remove file frmo staging)
+#git checkout -- <target>
+git checkout -- octocat.txt
+
+
+#create local branch called "clean_up"
+git branch clean_up
+
+
+#show all branch and master
+git branch
+
+
+#switch branch
+git checkout clean_up
+
+
+#remove file from disk and stage
+git rm '*.txt'
+
+#commit the remove changes
+git commit -m 'Remove all the cats'
+
+
+#switch back to master
+git checkout master
+
+#prepare to merge 'clean_up' branch to master
+git merge clean_up
+
+
+#after complete merge, we can delete the branch 'clean_up'
+git branch -d clean_up
+
+
+#final push
+git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
