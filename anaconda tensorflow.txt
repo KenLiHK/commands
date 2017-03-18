@@ -23,6 +23,9 @@ $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensor
 #install tensorflow in GPU 
 $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.0.0-cp35-cp35m-win_x86_64.whl
 
+# install matplotlib for visualize result
+pip install matplotlib
+
 
 # tensorflow board command
 tensorboard --logdir='logs/'
