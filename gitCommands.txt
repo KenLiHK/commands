@@ -1,0 +1,146 @@
+
+
+Git Commands
+
+#Set a Git username:
+$ git config --global user.name "Mona Lisa"
+
+#Confirm that you have set the Git username correctly:
+$ git config --global user.name
+
+#Setting your commit email address in Git
+$ git config --global user.email "email@example.com"
+
+#Confirm that you have set the email address correctly in Git:
+$ git config --global user.email
+
+#Caching your GitHub password in Git
+#Find out if Git and the osxkeychain helper are already installed:
+$ git credential-osxkeychain
+
+#you can install Git and the osxkeychain helper by using Homebrew if it is not yet installed
+$ brew install git
+
+#Tell Git to use osxkeychain helper using the global credential.helper config:
+$ git config --global credential.helper osxkeychain
+
+#Cloning with HTTPS URLs (recommended)
+#Create a local clone of your fork
+$ git clone https://github.com/KenLiHK/AdNauseam.git
+$ git clone https://github.com/KenLiHK/uAssets.git
+$ git clone https://github.com/KenLiHK/RiTa.git
+$ git clone https://github.com/KenLiHK/RiTaJS.git
+
+
+
+#Configure Git to sync your fork with the original Spoon-Knife repository
+#see the current configured remote repository for your fork.
+#go into AdNauseam directory
+$ git remote -v
+
+# link fork to origin / upstream
+$ git remote add upstream https://github.com/dhowe/AdNauseam.git
+$ git remote add upstream https://github.com/dhowe/uAssets.git
+
+$ git remote add upstream https://github.com/dhowe/RiTa.git
+$ git remote add upstream https://github.com/dhowe/RiTaJS.git
+
+
+#Syncing a fork
+#Download upstream changes to local repo and create a upstream/master branch
+$ git fetch upstream 
+
+#Merge this upstrea/master branch to local repo master
+$ git merge upstream/master
+
+#Upload upstream change to fork master
+$ git push origin master
+
+#create a branch for a change in local repo
+$ git checkout -b local_branch_01
+
+#*************************************************************
+#add new file
+$ git add adnauseam.txt
+
+#commit changes
+$ git commit -m “Fix AdNauseam#1450”
+
+#push changes from local_branch_01 to local origin
+$ git push origin local_branch_01
+
+#*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+#after pull request accepted and merged, clean up branch
+$ git pull upstream master
+
+#delete local feature branch
+$ git branch -d local_branch_01
+
+# update the master branch in forked repository
+$ git push origin master
+
+#push the deletion of the feature branch to your GitHub repository
+$ git push —delete origin local_branch_01
+
+#*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+# To remove all not committed changes
+$ git reset HEAD - -hard
+
+# To remove all untracked (non-git) files and folders
+$ git clean -fd
+
+#*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+#keep fork in sync
+$ git pull upstream master
+$ git push origin master
+
+
+#*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+# build for Chrome testing
+/Users/kenli/Documents/workspace/AdNauseam
+tools/make-chromium.sh
+
+# build for Firefox testing
+/Users/kenli/Documents/workspace/AdNauseam
+tools/run-webext.sh
+#*************************************************************
+
+
+#install Home-brew
+#Paste that at a Terminal prompt.
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+
+
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python/libexec/bin
+
+If you need Homebrew's Python 2.7 run
+  brew install python@2
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+
+#web-ext installation
+$ npm install —global web-ext
+$ sudo install - - global web-ext
+
+#making a feature branch
+#git checkout -b <new branch name>
+$ git checkout -b <new branch name>
+
+#grant permission
+$ sudo chmod 777 /usr/local/lib/node_modules/npm/node_modules/aproba
+
+
+
+
